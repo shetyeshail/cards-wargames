@@ -2,7 +2,8 @@ package cards;
 public class Card implements Comparable{
     private Suit suit;
     private int rank;
-    private boolean faceUp;
+    //change: made faceUp static
+    private static boolean faceUp;
     
     public Card(Suit suit, int rank){
         this.suit = suit;
@@ -44,7 +45,8 @@ public class Card implements Comparable{
         return suit == Suit.heart || suit == Suit.diamond;
     }
     
-    public void turn(){
+    //change: made turn() static
+    public static void turn(){
         faceUp =! faceUp;
     }
     
